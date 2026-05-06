@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Master - Typing Speed Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-keyboard"></i>
+            TYPE MASTER
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Practice</a></li>
+                <li><a href="#">Stats</a></li>
+                <li><a href="#"><i class="far fa-user-circle"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="container">
+
+            <div class="main-text">
+                <h3>Paragraph Display</h3>
+            </div>
+
+            <div class="paragraph">
+                <p id="para">
+                    Loading paragraph...
+                </p>
+            </div>
+
+            <div class="main-text">
+                <h3>Stats Bar</h3>
+            </div>
+
+            <div class="stats-wrapper">
+                <div id="time" class="time"><i class="far fa-clock" style="margin-right:8px"></i> Time: 0</div>
+                <div id="wpm" class="WPM"><i class="fas fa-bolt" style="margin-right:8px"></i> WPM: 0</div>
+                <div id="accu" class="accuracy"><i class="fas fa-bullseye" style="margin-right:8px"></i> Accuracy: 0%
+                </div>
+            </div>
+
+            <div class="typing-area">
+                <input id="text" onclick="start()" type="text" placeholder="Click here to start typing....">
+            </div>
+
+            <div class="btn">
+                <button id="rest-btn" onclick="reset()">
+                    <h1>Reset</h1>
+                </button>
+                <button id="start-btn" onclick="start()">
+                    <h1>Start</h1>
+                </button>
+                <button id="stop" onclick="stop()">
+                    <h1>Stop</h1>
+                </button>
+            </div>
+
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Support</a>
+        </div>
+        <div class="footer-col">
+            <h4>Community</h4>
+            <a href="#">Leaderboards</a>
+            <a href="#">Forums</a>
+        </div>
+        <div class="footer-col">
+            <h4>Connect</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <p>&copy; 2026 TypeMaster Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

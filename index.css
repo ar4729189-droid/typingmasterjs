@@ -1,0 +1,229 @@
+:root {
+    --primary-cyan: #00b4d8;
+    --light-bg: #f8f9fa;
+    --text-main: #2d3436;
+    --glass-bg: rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    background-image:
+        radial-gradient(at 0% 0%, hsla(186, 100%, 90%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(186, 100%, 85%, 1) 0, transparent 50%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER --- */
+header {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: var(--primary-cyan);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: var(--primary-cyan);
+}
+
+.container-fluid {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-text h3 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-main);
+    opacity: 0.9;
+}
+
+.stats-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Stats Box */
+.time,
+.WPM,
+.accuracy {
+    flex: 1;
+    height: 70px;
+    background: white;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.time:hover,
+.WPM:hover,
+.accuracy:hover {
+    border-color: var(--primary-cyan);
+    background: rgba(0, 180, 216, 0.05);
+}
+
+/* Paragraph Styling */
+.paragraph {
+    width: 100%;
+    min-height: 150px;
+    border-radius: 15px;
+    padding: 25px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background: white;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+#para {
+    color: #444;
+    text-align: center;
+}
+
+/* Input Area */
+.typing-area {
+    width: 100%;
+}
+
+#text {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 12px;
+    background: white;
+    border: 2px solid var(--glass-border);
+    color: #000;
+    outline: none;
+    transition: 0.3s;
+}
+
+#text:focus {
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.2);
+    color: #000;
+}
+
+.btn {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+button {
+    width: 110px;
+    height: 110px;
+    background: white;
+    color: var(--text-main);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--glass-border);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button h1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+button:hover {
+    border-color: var(--primary-cyan);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 180, 216, 0.3);
+    background: white;
+}
+
+#stop:hover {
+    border-color: #ff4b2b;
+    box-shadow: 0 0 25px rgba(255, 75, 43, 0.3);
+}
+
+footer {
+    padding: 40px 50px;
+    background: #eee;
+    border-top: 1px solid var(--glass-border);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: var(--primary-cyan);
+    font-size: 0.9rem;
+}
+
+.footer-col p,
+.footer-col a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 8px;
+}
