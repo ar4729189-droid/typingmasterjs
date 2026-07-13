@@ -10,7 +10,7 @@ const paragraphs = [
 
 // let time etc
 
-let timeleft = 20;
+let timeleft = 60;
 let timer;
 let timestarter = false;
 let mistakes = 0;
@@ -32,7 +32,7 @@ const stopBtn = document.getElementById("stop");
 
 accuracyDisplay.innerText = "Accuracy: 0%";
 wpmDisplay.innerText = "WPM: 0";
-timeDisplay.innerText = "Time: 20";
+timeDisplay.innerText = "Time: 60";
 
 // loading paragraph 
 
@@ -60,7 +60,7 @@ function startTimer() {
         timestarter = false;
         textarea.disabled = true;
         let words = (textarea.value.length / 5);
-        let mins = 20 / 20;
+        let mins = 60 / 60;
         let WPM = Math.round(words / mins);
         let Spans = displaypara.querySelectorAll("span");
         let typedText = textarea.value;
@@ -127,14 +127,14 @@ function stop() {
 
 function reset() {
     clearInterval(timer);
-    timeleft = 20;
+    timeleft = 60;
     timestarter = false;
     textarea.disabled = false;
     textarea.value = "";
     resultDisplay.innerText = "";
     accuracyDisplay.innerText = "Accuracy: 0%";
     wpmDisplay.innerText = "WPM: 0";
-    timeDisplay.innerText = "Time: 20";
+    timeDisplay.innerText = "Time: 60";
     loadPara();
 };
 
